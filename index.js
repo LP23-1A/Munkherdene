@@ -3,16 +3,16 @@ let add = document.querySelectorAll(".btn");
 
 let away = document.querySelector(".away");
 
-function openModal() {
+function open() {
   modal.classList.add("flex");
 }
 
-function backDisplay() {
+function displayback() {
   modal.classList.remove("flex");
 }
 
 for (let i = 0; i < add.length; i++) {
-  add[i].onclick = openModal;
+  add[i].onclick = open;
 }
 
-away.onclick = backDisplay;
+away.onclick = displayback;
