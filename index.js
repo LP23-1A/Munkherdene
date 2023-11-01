@@ -1,7 +1,7 @@
 let modal = document.querySelector(".subcontainer");
 let add = document.querySelectorAll(".btn");
 
-let back = document.querySelector(".away");
+let away = document.querySelector(".away");
 
 function openModal() {
   modal.classList.add("flex");
@@ -15,4 +15,4 @@ for (let i = 0; i < add.length; i++) {
   add[i].onclick = openModal;
 }
 
-back.onclick = backDisplay;
+away.onclick = backDisplay;
