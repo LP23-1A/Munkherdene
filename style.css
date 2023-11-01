@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-image: url("https://c1.wallpaperflare.com/path/565/385/156/sunset-brook-green-meadow-june-df867360f0bed19da26bbb3838498c8f.jpg");
+  background-size: 100%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.49);
+  resize: none;
+  height: 100px;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.49);
+}
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.49);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panels {
+  display: flex;
+  gap: 16px;
+  padding: 130px 0 130px 0;
+}
+.panel {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ebecf0;
+  border-radius: 8px;
+  padding: 8px;
+  gap: 8px;
+  overflow: hidden;
+  height: fit-content;
+}
+.panel-header {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.numbers {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  gap: 35px;
+  height: fit-content;
+}
+.text {
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid black;
+  font-size: 12px;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.icon {
+  border: 1px solid black;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.icon:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.btn {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.subcontainer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.away {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000000c5;
+  top: 0;
+  right: 0;
+}
+.flex {
+  display: flex !important;
+}
+.note {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 20;
+}
+#button {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  margin-top: 24px;
+}
