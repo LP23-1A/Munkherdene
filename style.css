@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -55,6 +54,7 @@ select {
   gap: 8px;
   overflow: hidden;
   height: fit-content;
+  flex: 1;
 }
 .panel-header {
   font-size: 20px;
