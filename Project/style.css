@@ -32,6 +32,11 @@ select {
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.315);
 }
+p {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -54,7 +59,6 @@ select {
   gap: 8px;
   overflow: hidden;
   height: fit-content;
-  flex: 1;
 }
 .panel-header {
   font-size: 20px;
@@ -70,6 +74,7 @@ select {
 .cards {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 .card {
   padding: 8px;
@@ -78,6 +83,12 @@ select {
   display: flex;
   gap: 35px;
   height: fit-content;
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
 }
 .text {
   width: fit-content;
@@ -105,11 +116,7 @@ select {
 .icon:hover {
   background-color: rgba(0, 0, 0, 0.12);
 }
-.texts {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+
 .btn {
   display: flex;
   gap: 16px;
