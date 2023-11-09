@@ -17,7 +17,7 @@
         <div class="panel">
           <div class="panel-header">
             To do
-            <p class="numbers">1</p>
+            <p class="numbers">0</p>
           </div>
           <div class="cards"></div>
           <div class="btn" onclick="openNote()">
@@ -28,7 +28,7 @@
         <div class="panel">
           <div class="panel-header">
             In progress
-            <p class="numbers">1</p>
+            <p class="numbers">0</p>
           </div>
           <div class="cards"></div>
           <div class="btn" onclick="openNote()">
@@ -39,7 +39,7 @@
         <div class="panel">
           <div class="panel-header">
             Stuck
-            <p class="numbers">1</p>
+            <p class="numbers">0</p>
           </div>
           <div class="cards"></div>
           <div class="btn" onclick="openNote()">
@@ -50,7 +50,7 @@
         <div class="panel">
           <div class="panel-header">
             Done
-            <p class="numbers">1</p>
+            <p class="numbers">0</p>
           </div>
           <div class="cards"></div>
           <div class="btn" onclick="openNote()">
@@ -60,46 +60,45 @@
         </div>
       </div>
     </div>
+
     <div class="subcontainer">
-      <div class="full">
-        <div class="away"></div>
-        <div class="note">
-          <form id="card-form">
-            <h1>Add task</h1>
-            <div class="title">
-              <label for="title">Title</label>
-              <input type="text" name="title" id="title" />
-              <p class="small-text">Бөглөнө үү</p>
-            </div>
-            <div class="description">
-              <label for="description">Description</label>
-              <textarea
-                name="description"
-                id="description"
-                cols="30"
-                rows="10"
-              ></textarea>
-            </div>
-            <div class="status">
-              <label for="status">Status</label>
-              <select name="status" id="status">
-                <option value="To do">To do</option>
-                <option value="In progress">In progress</option>
-                <option value="Stuck">Stuck</option>
-                <option value="Done">Done</option>
-              </select>
-            </div>
-            <div class="priority">
-              <label for="priority">Priority</label>
-              <select name="priority" id="priority">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-              </select>
-            </div>
-            <button type="submit" id="button">Add task</button>
-          </form>
-        </div>
+      <div class="away"></div>
+      <div class="note">
+        <form id="card-form">
+          <h1>Add task</h1>
+          <div class="title">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" />
+            <p class="small-text">Бөглөнө үү</p>
+          </div>
+          <div class="description">
+            <label for="description">Description</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="status">
+            <label for="status">Status</label>
+            <select name="status" id="status">
+              <option value="To do">To do</option>
+              <option value="In progress">In progress</option>
+              <option value="Stuck">Stuck</option>
+              <option value="Done">Done</option>
+            </select>
+          </div>
+          <div class="priority">
+            <label for="priority">Priority</label>
+            <select name="priority" id="priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <button type="submit" id="button">Add task</button>
+        </form>
       </div>
     </div>
     <script>
@@ -151,7 +150,7 @@
         return `
     <div class="card">
         <div class="icon">
-            <i class="fa fa-check" aria-hidden="true"></i>
+            <i class="fa fa-check" onclick="movecard(${index})" aria-hidden="true"></i>
         </div>
         <div class="texts">
             <h4>${card.title}</h4>
@@ -225,7 +224,12 @@
           addCard();
         }
       });
-      let cards = document.getElementsByClassName(".cards");
+      function movecard(index) {
+        const movecard = cardsData.splice(index, 1)[0];
+        movecard.status = "Done";
+        cardsData.push(movecard);
+        renderCards();
+      }
     </script>
   </body>
 </html>
