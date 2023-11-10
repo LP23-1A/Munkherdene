@@ -19,7 +19,7 @@
             To do
             <p class="numbers">0</p>
           </div>
-          <div class="cards"></div>
+          <div class="cards" draggable="true" id="test" data-id="test"></div>
           <div class="btn" onclick="openNote()">
             <i class="fa fa-plus"></i>
             <p>Add card</p>
@@ -30,7 +30,7 @@
             In progress
             <p class="numbers">0</p>
           </div>
-          <div class="cards"></div>
+          <div class="cards" draggable="true" id="test" data-id="test"></div>
           <div class="btn" onclick="openNote()">
             <i class="fa fa-plus"></i>
             <p>Add card</p>
@@ -41,7 +41,7 @@
             Stuck
             <p class="numbers">0</p>
           </div>
-          <div class="cards"></div>
+          <div class="cards" draggable="true" id="test" data-id="test"></div>
           <div class="btn" onclick="openNote()">
             <i class="fa fa-plus"></i>
             <p>Add card</p>
@@ -52,7 +52,7 @@
             Done
             <p class="numbers">0</p>
           </div>
-          <div class="cards"></div>
+          <div class="cards" draggable="true" id="test" data-id="test"></div>
           <div class="btn" onclick="openNote()">
             <i class="fa fa-plus"></i>
             <p>Add card</p>
@@ -148,7 +148,7 @@
       }
       function createCardHtml(card, index) {
         return `
-    <div class="card">
+    <div class=card >
         <div class="icon">
             <i class="fa fa-check" onclick="movecard(${index})" aria-hidden="true"></i>
         </div>
@@ -230,6 +230,42 @@
         cardsData.push(movecard);
         renderCards();
       }
+
+      const cards = document.querySelectorAll(".cards");
+      const panels = document.querySelectorAll(".panel");
+
+      let draggedItem = null;
+      cards.forEach((cards) => {
+        cards.addEventListener("dragstart", (event) => {
+          draggedItem = event.target;
+          event.dataTransfer.setData(
+            "texts",
+            event.target.getAttribute("data-id")
+          );
+        });
+        cards.addEventListener("dragend", () => {
+          draggedItem = null;
+        });
+      });
+      panels.forEach((panel) => {
+        panel.addEventListener("dragover", (event) => {
+          event.preventDefault();
+        });
+        panel.addEventListener("dragenter", (event) => {
+          event.preventDefault();
+          if (draggedItem) {
+            const draggingPanel = draggedItem.parentNode;
+            if (draggingPanel !== event.currentTarget) {
+              event.currentTarget.appendChild(draggedItem);
+              btn.appendChild(cards);
+            }
+          }
+        });
+        panel.addEventListener("dragleave", () => {});
+        panel.addEventListener("drop", (event) => {
+          event.preventDefault();
+        });
+      });
     </script>
   </body>
 </html>
