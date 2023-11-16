@@ -45,7 +45,7 @@ function renderCards() {
 }
 function createCardHtml(card, index) {
   return `
-    <div class=card draggable="true" id="test" data-id="${index}">
+    <div class="card" draggable="true" id="test" data-id="${index}">
         <div class="icon">
             <i class="fa fa-check" onclick="movecard(${index})" aria-hidden="true"></i>
         </div>
@@ -66,7 +66,7 @@ function createCardHtml(card, index) {
     `;
 }
 function getStatusIndex(status) {
-  const statuses = ["To do", "In progress", "Stuck", "Done"];
+  let statuses = ["To do", "In progress", "Stuck", "Done"];
   return statuses.indexOf(status);
 }
 renderCards();
@@ -136,7 +136,7 @@ function updateCardsCount() {
     const cardsCount = panel.querySelectorAll(".card").length;
     const numbersElement = panel.querySelector(".numbers");
     if (numbersElement) {
-      numbersElement.textContent = cardsCount.toString();
+      numbersElement.textContent = cardsCount;
     }
   });
 }
@@ -163,19 +163,18 @@ panel.forEach((panel) => {
       if (draggingcards !== event.currentTarget) {
         event.currentTarget.querySelector(".cards").appendChild(draggedItem);
         let id = draggedItem.getAttribute("data-id");
-        cardsData = cardsData.map((card, index) => {
+        data = data.map((card) => {
           if (card.id === id) {
-            if (event.currentTarget.classList.contains("todo")) {
+            if (event.currentTarget.id === "todo") {
               card.status = "To do";
-            } else if (event.currentTarget.classList.contains("in-progress")) {
+            } else if (event.currentTarget.id === "inprogress") {
               card.status = "In progress";
-            } else if (event.currentTarget.classList.contains("stuck")) {
+            } else if (event.currentTarget.id === "stuck") {
               card.status = "Stuck";
-            } else if (event.currentTarget.classList.contains("done")) {
+            } else if (event.currentTarget.id === "done") {
               card.status = "Done";
             }
           }
-          return card;
         });
       }
     }

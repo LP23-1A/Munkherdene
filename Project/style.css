@@ -4,7 +4,7 @@
   font-family: sans-serif;
 }
 body {
-  background-image: url("https://c1.wallpaperflare.com/path/565/385/156/sunset-brook-green-meadow-june-df867360f0bed19da26bbb3838498c8f.jpg");
+  background-image: url("https://images.unsplash.com/photo-1690826066503-90b684627f6d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D");
   background-size: 100%;
 }
 form {
@@ -53,7 +53,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #ebecf0;
+  background-color: #93a7ca;
   border-radius: 8px;
   padding: 8px;
   gap: 8px;
@@ -79,7 +79,7 @@ p {
 .card {
   padding: 8px;
   border-radius: 4px;
-  background-color: white;
+  background-color: #66769f;
   display: flex;
   gap: 35px;
   height: fit-content;
@@ -89,6 +89,7 @@ p {
   flex-direction: column;
   gap: 12px;
   overflow: hidden;
+  word-wrap: break-word;
 }
 .text {
   width: fit-content;
@@ -144,11 +145,11 @@ p {
 }
 .note {
   position: absolute;
-  background-color: white;
+  background-color: #b2b4e5;
   border-radius: 8px;
   padding: 16px;
   width: 400px;
-  gap: 16px;
+
   height: fit-content;
   top: 50%;
   left: 50%;
