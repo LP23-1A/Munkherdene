@@ -1,25 +1,24 @@
-import React from "react";
 import Beach from "@/Image/Beach.png";
 function Post() {
   const posts = [
     {
       image: Beach.src,
       category: "Technology",
-      title:
+      text:
         "The Impact of Technology on the Workplace: How Technology is Changing",
       date: "August 20, 2022",
     },
     {
       image: Beach.src,
       category: "Te",
-      title:
+      text:
         "The Impact of Technology on the Workplace: How Technology is Changing",
       date: "August 20, 2022",
     },
     {
       image: Beach.src,
       category: "Technology",
-      title:
+      text:
         "The Impact of Technology on the Workplace: How Technology is Changing",
       date: "August 20, 2022",
     },
@@ -34,11 +33,11 @@ function Post() {
               alt=""
               className="w-[22rem] h-[15rem] rounded-lg p[1rem] p-[1rem]"
             />
-            <div className="p-[1rem]">
+            <div className="p-[1rem] flex flex-col gap-[12px]">
               <button className="bg-gray-100 w-[6rem] h-[2rem] rounded-lg text-blue-700">
                 {post.category}
               </button>
-              <p className="text-2xl text-black">{post.title}</p>
+              <p className="text-2xl text-black">{post.text}</p>
               <div className="text-gray-400 p-[0.2rem]">{post.date}</div>
             </div>
           </div>
