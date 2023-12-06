@@ -3,7 +3,7 @@ function trend() {
   return (
     <div className="flex flex-col gap-[24px]">
       <div className="pl-[620px]">
-        <h1 className="text-2xl">Trending</h1>
+        <h1 className="text-2xl font-sans font-bold">Trending</h1>
       </div>
       <div>
         <Carddata />

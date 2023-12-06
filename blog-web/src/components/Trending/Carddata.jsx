@@ -29,10 +29,10 @@ function Cards() {
         <div key={index} className="relative w-[15rem] h-[20rem]">
           <img src={card.image} alt="" />
           <div className="absolute bottom-[55px] p-4 text-white  flex flex-col gap-2">
-            <button className="bg-blue-600 h-7 rounded-lg w-24 ">
+            <button className="bg-blue-600 h-7 rounded-lg w-24 font-medium font-sans">
               {card.category}
             </button>
-            <p className="text-sm">{card.text}</p>
+            <p className="text-sm font-sans font-semibold">{card.text}</p>
           </div>
         </div>
       ))}

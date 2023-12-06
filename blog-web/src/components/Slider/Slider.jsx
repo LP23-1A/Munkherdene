@@ -5,16 +5,18 @@ function Tech() {
   return (
     <div className="flex flex-col justify-center items-center relative gap-[12px]">
       <img src={Img.src} alt="" className="w-[1000px] h-[500px] shrink-0 " />
-      <div className="flex pr-[980px] pt-[30px] absolute">
-        <div className="bg-white w-[598px] h-[200px] absolute rounded-lg">
-          <div className="p-10 flex flex-col gap-[12px]">
-            <button className="bg-blue-600 w-[6rem] h-[2rem] rounded-lg text-white">
+      <div className="flex pr-[980px] pb-[30px] absolute">
+        <div className="bg-white w-[598px] h-[230px] absolute rounded-lg">
+          <div className=" flex flex-col gap-[12px] p-10">
+            <button className="bg-blue-600 w-[6rem] h-[2rem] rounded-lg text-white font-medium font-sans">
               Technology
             </button>
-            <p className="text-2xl">
+            <p className="text-3xl font-sans font-semibold">
               Grid system for better Design User Interface
             </p>
-            <p className="text-gray-400">August 20, 2022</p>
+            <p className="text-gray-400 font-sans font-normal">
+              August 20, 2022
+            </p>
           </div>
         </div>
       </div>
