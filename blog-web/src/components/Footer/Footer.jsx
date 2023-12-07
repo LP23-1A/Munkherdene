@@ -18,7 +18,7 @@ function footer() {
               enim ad minim veniam
             </p>
           </div>
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start max-sm:hidden">
             <p>Email : info@jstemplate.net</p>
             <p>Phone : 880 123 456 789</p>
           </div>
@@ -40,12 +40,12 @@ function footer() {
       <div className="flex w-[1216px] h-[95px] py-[32px] px-0 items-center gap-[430px]">
         <div className="flex items-center gap-[10px]">
           <Beta />
-          <div className="flex flex-col items-start gap-[2px]">
+          <div className="flex flex-col items-start gap-[2px] md:max-lg:flex">
             <p>MetaBlog</p>
             <p>© All Rights Reserved.</p>
           </div>
         </div>
-        <div className="flex justify-end items-center gap-[16px]">
+        <div className="flex justify-end items-center gap-[16px] max-lg:hidden">
           <p>Terms of Use</p>
           <hr />
           <p>Privacy Policy</p>

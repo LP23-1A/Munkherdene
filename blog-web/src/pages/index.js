@@ -4,7 +4,9 @@ import Card from "@/components/Trending/Card";
 import Navbar from "@/components/Navbar/Navbar";
 import Slider from "@/components/Slider/Slider";
 import Footer from "@/components/Footer/Footer";
+import Contact from "@/components/Contact/Contact";
 import { useEffect, useState } from "react";
+
 let api = "https://dev.to/api/articles?username=gereltuyamz";
 export default function Home() {
   const [data, setData] = useState([]);
@@ -21,6 +23,7 @@ export default function Home() {
   return (
     <main className="bg-white flex flex-col gap-[20px]">
       <Navbar />
+      {/* <Contact /> */}
       <Slider />
       <Card />
       <Allblog />
@@ -35,13 +38,13 @@ export default function Home() {
                 <img src={el.social_image} alt="" className="h-40 rounded-lg" />
                 <div className="flex flex-col gap-[12px]">
                   <button className="bg-gray-100 w-[6rem] h-[2rem] rounded-lg text-blue-700 font-medium font-sans">
-                    {el.category}
+                    {el.tag_list}
                   </button>
                   <p className="text-xl text-black font-sans font-semibold">
                     {el.description}
                   </p>
                   <div className="text-gray-400 font-normal font-sans">
-                    {el.tag_list}
+                    {el.readable_publish_date}
                   </div>
                 </div>
               </div>
@@ -50,7 +53,7 @@ export default function Home() {
         </div>
         <button
           onClick={handler}
-          className="w-[100px] h-[40px] text-gray-500 border rounded-sm"
+          className="w-[100px] h-[40px] text-gray-500 border rounded-lg"
         >
           Load more
         </button>
