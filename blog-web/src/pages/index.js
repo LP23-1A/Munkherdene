@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar/Navbar";
 import Slider from "@/components/Slider/Slider";
 import Footer from "@/components/Footer/Footer";
 import { useEffect, useState } from "react";
-import Test from "@/pages/Test";
 
 let api = "https://dev.to/api/articles?username=gereltuyamz";
 export default function Home() {

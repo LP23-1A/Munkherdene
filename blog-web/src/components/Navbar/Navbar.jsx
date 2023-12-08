@@ -14,7 +14,10 @@ function Navbar() {
           <div className="flex gap-[2rem] items-center">
             <p>Home</p>
             <p>Blog</p>
-            <p onClick={handlermove} className="cursor-pointer hover:text-gray-400">
+            <p
+              onClick={handlermove}
+              className="cursor-pointer hover:text-gray-400"
+            >
               Contact
             </p>
           </div>
