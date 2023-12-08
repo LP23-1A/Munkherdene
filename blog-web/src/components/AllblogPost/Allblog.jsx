@@ -1,7 +1,10 @@
 import Article from "@/components/AllblogPost/Article";
+import { useRouter } from "next/router";
 function one() {
+  const router = useRouter();
+  const movePage = () => router.push(`Post`);
   return (
-    <div className="flex flex-col gap-[24px]">
+    <div className="flex flex-col gap-[24px] bg-white">
       <div className="pl-[620px]">
         <h1 className="text-2xl font-sans font-bold">All Blog Post</h1>
       </div>
@@ -15,7 +18,9 @@ function one() {
           <p>Branding</p>
         </div>
         <div className="font-sans font-bold">
-          <p>View All</p>
+          <p onClick={movePage} className="cursor-pointer hover:text-gray-400">
+            View All
+          </p>
         </div>
       </div>
       <div className="flex justify-center items-center">

@@ -1,6 +1,9 @@
 import Union from "@/SVG/Union";
 import Search from "@/SVG/Search";
+import { useRouter } from "next/router";
 function Navbar() {
+  const router = useRouter();
+  const handlermove = () => router.push(`Contact`);
   return (
     <div className="flex h-[6.25rem] gap-3 py-[32px] pr-[60px] justify-center">
       <div className="flex text-black items-center gap-[20rem] justify-center w-[70rem] h-[2.25rem]">
@@ -11,7 +14,9 @@ function Navbar() {
           <div className="flex gap-[2rem] items-center">
             <p>Home</p>
             <p>Blog</p>
-            <p>Contact</p>
+            <p onClick={handlermove} className="cursor-pointer hover:text-gray-400">
+              Contact
+            </p>
           </div>
           <div className="flex items-center bg-gray-100 rounded-sm">
             <input

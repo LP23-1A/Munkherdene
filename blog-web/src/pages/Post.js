@@ -1,14 +1,11 @@
 import axios from "axios";
-import Allblog from "@/components/AllblogPost/Allblog";
-import Card from "@/components/Trending/Card";
 import Navbar from "@/components/Navbar/Navbar";
-import Slider from "@/components/Slider/Slider";
 import Footer from "@/components/Footer/Footer";
-import { useEffect, useState } from "react";
-import Test from "@/pages/Test";
+import Allblog from "@/components/AllblogPost/Allblog";
+import { useState, useEffect } from "react";
 
 let api = "https://dev.to/api/articles?username=gereltuyamz";
-export default function Home() {
+export default function container() {
   const [data, setData] = useState([]);
 
   const getData = async (api) => {
@@ -23,10 +20,8 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-white flex flex-col gap-[20px]">
+    <main className="flex flex-col gap-[24px] bg-white">
       <Navbar />
-      <Slider />
-      <Card />
       <Allblog />
       <div className="flex flex-col justify-center items-center gap-10">
         <div className="flex flex-wrap gap-4 max-w-5xl">
@@ -60,7 +55,6 @@ export default function Home() {
         </button>
       </div>
       <Footer />
-      {/* <Test /> */}
     </main>
   );
 }
