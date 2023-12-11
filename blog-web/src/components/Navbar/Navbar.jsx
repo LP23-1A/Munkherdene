@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 function Navbar() {
   const router = useRouter();
   const handlermove = () => router.push(`Contact`);
+  const homemove = () => router.push(`Home`);
+  const blogmove = () => router.push(`Post`);
   return (
     <div className="flex h-[6.25rem] gap-3 py-[32px] pr-[60px] justify-center">
       <div className="flex text-black items-center gap-[20rem] justify-center w-[70rem] h-[2.25rem]">
@@ -12,8 +14,18 @@ function Navbar() {
         </div>
         <div className="flex gap-[4rem] h-[36px]">
           <div className="flex gap-[2rem] items-center">
-            <p>Home</p>
-            <p>Blog</p>
+            <p
+              onClick={homemove}
+              className="cursor-pointer hover:text-gray-400"
+            >
+              Home
+            </p>
+            <p
+              onClick={blogmove}
+              className="cursor-pointer hover:text-gray-400"
+            >
+              Blog
+            </p>
             <p
               onClick={handlermove}
               className="cursor-pointer hover:text-gray-400"
