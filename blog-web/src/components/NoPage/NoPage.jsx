@@ -16,7 +16,7 @@ export default function nopage() {
             looking for.
           </p>
           <button
-            className="bg-blue-500 text-lg w-[130px] h-[40px] rounded-lg"
+            className="bg-blue-500 text-sm w-[130px] h-[40px] rounded-lg text-white"
             onClick={homeback}
           >
             Back To Home

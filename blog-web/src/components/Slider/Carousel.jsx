@@ -4,7 +4,7 @@ import Forward from "@/SVG/Forward";
 function Tech() {
   return (
     <div className="flex flex-col justify-center items-center relative gap-[12px] max-sm:hidden">
-      <img src={Img.src} alt="" className="w-[1000px] h-[500px] shrink-0 " />
+      <img src={Img.src} alt="" className="w-[1000px] h-[500px]" />
       <div className="flex pr-[980px] pb-[30px] absolute">
         <div className="bg-white w-[598px] h-[230px] absolute rounded-lg">
           <div className=" flex flex-col gap-[12px] p-10">

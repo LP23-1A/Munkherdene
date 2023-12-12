@@ -16,7 +16,7 @@ function Post() {
   }, []);
   return (
     <div className="flex flex-col justify-center items-center gap-10">
-      <div className="flex flex-wrap gap-4 max-w-5xl">
+      <div className="flex flex-wrap gap-4 max-w-5xl justify-center">
         {data.map((el, index) => (
           <div
             key={index}

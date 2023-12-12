@@ -4,13 +4,15 @@ import Navbar from "@/components/Navbar/Navbar";
 import Carousel from "@/components/Slider/Carousel";
 import Footer from "@/components/Footer/Footer";
 import NoPage from "@/pages/NoPage";
+import ExampleCarousel from "@/components/ExampleCarousel";
 
 export default function Home() {
   return (
     <main className="bg-white flex flex-col gap-[20px]">
       <Navbar />
       {/* <NoPage /> */}
-      <Carousel />
+      {/* <Carousel /> */}
+      <ExampleCarousel />
       <Card />
       <Allblog />
       <Footer />
