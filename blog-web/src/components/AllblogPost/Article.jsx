@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+
 let api = "https://dev.to/api/articles?username=gereltuyamz";
 function Post() {
   const [data, setData] = useState([]);
