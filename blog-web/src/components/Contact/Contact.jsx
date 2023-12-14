@@ -61,7 +61,7 @@ function contact() {
                   className="rounded-sm h-[150px] shadow-lg resize-none"
                 ></textarea>
               </div>
-              <button className="inline-flex flex-col items-center justify-center rounded-lg bg-blue-600 w-[120px] h-[40px]">
+              <button className="inline-flex flex-col items-center justify-center rounded-lg bg-blue-600 w-[120px] h-[40px] text-white">
                 Send Message
               </button>
             </div>

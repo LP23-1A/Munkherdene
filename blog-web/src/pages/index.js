@@ -3,7 +3,7 @@ import Card from "@/components/Trending/Card";
 import Carousel from "@/components/Slider/Carousel";
 import NoPage from "@/pages/NoPage";
 import ExampleCarousel from "@/components/ExampleCarousel";
-import Description from "@/components/AllblogPost/Description";
+
 
 export default function Home() {
   return (
