@@ -1,19 +1,34 @@
+import React, { useState } from "react";
 import Union from "@/SVG/Union";
 import Search from "@/SVG/Search";
 import { useRouter } from "next/router";
+import MenuIcon from "@/components/Navbar/MenuIcon";
+import MobileMenu from "@/components/Navbar/MobileMenu";
 function Navbar() {
   const router = useRouter();
   const handlermove = () => router.push(`Contact`);
   const homemove = () => router.push(`Home`);
   const blogmove = () => router.push(`Post`);
+  const [isOpen, setIsOpen] = useState(false);
+  const menuHandler = () => {
+    setIsOpen(!isOpen);
+  };
+  const moveHandlers = {
+    homemove,
+    blogmove,
+    handlermove,
+  };
   return (
-    <div className="flex h-[6.25rem] gap-3 py-[32px] pr-[60px] justify-center">
-      <div className="flex text-black items-center gap-[20rem] justify-center w-[70rem] h-[2.25rem]">
+    <div className="flex flex-col md:flex-row items-center justify-center h-[6.25rem] gap-3 pl-[210px] pr-[60px]">
+      <div className="flex items-center gap-[20rem] w-full md:w-[70rem] justify-center">
         <div>
           <Union />
         </div>
-        <div className="flex gap-[4rem] h-[36px]">
-          <div className="flex gap-[2rem] items-center">
+        <button className="md:hidden" onClick={menuHandler}>
+          <MenuIcon />
+        </button>
+        <div className="flex flex-grow gap-[4rem] items-center">
+          <div className="flex gap-[2rem] items-center list-none">
             <p
               onClick={homemove}
               className="cursor-pointer hover:text-gray-400"
@@ -44,6 +59,11 @@ function Navbar() {
           </div>
         </div>
       </div>
+      <MobileMenu
+        isOpen={isOpen}
+        menuHandler={menuHandler}
+        moveHandlers={moveHandlers}
+      />
     </div>
   );
 }

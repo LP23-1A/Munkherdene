@@ -3,7 +3,12 @@ import Twitter from "@/SVG/Twitter";
 import Instagram from "@/SVG/Instagram";
 import Linkedin from "@/SVG/LinkedIn";
 import Beta from "@/SVG/Beta";
+import { useRouter } from "next/router";
 function footer() {
+  const router = useRouter();
+  const handlermove = () => router.push(`Contact`);
+  const homemove = () => router.push(`Home`);
+  const blogmove = () => router.push(`Post`);
   return (
     <div className="bg-gray-200 flex h-[495px] flex-col items-center gap-[25px] pt-[64px] pl-[200px] pb-0 shrink-0">
       <div className="flex w-[1215px] items-start gap-[20px]">
@@ -25,9 +30,9 @@ function footer() {
         </div>
         <div className="flex flex-col w-[521px] gap-[80px] text-gray-500 ">
           <div className="flex flex-col gap-[8px] justify-center items-center">
-            <p>Home</p>
-            <p>Blog</p>
-            <p>Contact</p>
+            <p onClick={homemove}>Home</p>
+            <p onClick={blogmove}>Blog</p>
+            <p onClick={handlermove}>Contact</p>
           </div>
         </div>
         <div className="flex gap-6">

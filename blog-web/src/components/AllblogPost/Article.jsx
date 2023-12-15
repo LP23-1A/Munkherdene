@@ -22,7 +22,7 @@ function Post() {
     callData(api);
   }, []);
   const router = useRouter();
-  const singlePost = (id) => router.push(`/info/${id}`);
+  const singlePost = (id) => router.push(`/${id}`);
 
   useEffect(() => {
     setVisibleData(data.slice(0, visibleItemCount));
@@ -51,7 +51,17 @@ function Post() {
                 <p className="text-xl text-black font-sans font-semibold">
                   {el.description}
                 </p>
-                <div className="text-gray-400 font-normal font-sans">
+                <div className="text-gray-400 font-normal font-sans flex gap-[32px]">
+                  <div className="flex">
+                    <img
+                      className="w-6 h-6 rounded-full"
+                      src={el.user.profile_image}
+                      alt=""
+                    />
+                    <p className="text-[#97989F] text-[16px] font-normal ml-[12px]">
+                      {el.user.name}
+                    </p>
+                  </div>
                   {el.readable_publish_date}
                 </div>
               </div>
